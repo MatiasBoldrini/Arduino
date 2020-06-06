@@ -1,20 +1,33 @@
-#include <SoftwareSerial.h>
-SoftwareSerial BT(A0, A1); // RX, TX
+#include <Separador.h>
+Separador separador;
+#include <IRremote.h>
+int RECV_PIN = 11;
+IRrecv irrecv(RECV_PIN);
+decode_results results;
 int led1 = 6; //Cocina 1
-int led2 = 7; //Living 2
-int led3 = 8; //Cocina 1
+int led2 = 7; //Cocina 2
+int led3 = 8; //Living 1
 int led4 = 9; //Living 2
-int dato;
-boolean state1 = true; //todas las luces
-boolean state2 = true; //luces cocina
-boolean state3 = true; //luces living
-boolean ledstate1 = true; //Cocina 1
-boolean ledstate2 = true; //Cocina 2
-boolean ledstate3 = true; //Living 1
-boolean ledstate4 = true; //Living 2
+int tempPin = 0; //Pin de temperatura
+int encendido = true;
+int apagado = 'E318261B';
+int vol2 = '511DBB';
+int vol1 = 'A3C8EDDB';
+int play = 'D7E84B1B';
+int skip_fw = '20FE4DBB';
+int skip_bw = '52A3D41F';
+int uno = '9716BE3F';
+int dos = '3D9AE3F7';
+int tres = '6182021B';
+int cuatro = '8C22657B';
+int cinco = '488F3CBB';
+int seis = '449E79F';
+int siete = '32C6FDF7';
+int ocho = '1BC0157B';
+int nueve = '3EC3FC1B';
 void setup() {
   Serial.begin(9600);
-  BT.begin(9600);
+  irrecv.enableIRIn();
   pinMode(led1, OUTPUT );
   pinMode(led2, OUTPUT );
   pinMode(led3, OUTPUT );
@@ -22,47 +35,30 @@ void setup() {
 }
 
 void loop() {
-  
-//int  datoint=dato.toInt();
-    
-  if (Serial.available()>0) {
-    dato = Serial.read();
-    Serial.println(dato);
-    //datoint=dato.toInt();
-    switch (dato) {
-      case 'a': //prender y apagar todas las luces
-        digitalWrite(led1, state1);
-        digitalWrite(led2, state1);
-        digitalWrite(led3, state1);
-        digitalWrite(led4, state1);
-        state1 = !state1;
-        break;
-      case 'b': //ON OFF Cocina
-        digitalWrite(led1, state2);
-        digitalWrite(led2, state2);
-        state2 = !state2;
-        break;
-      case 'c': //on off living
-        digitalWrite(led3, state3);
-        digitalWrite(led4, state3);
-        state3 = !state3;
-        break;
-      case 'd': //Led cocina1
-        digitalWrite(led1, ledstate1);
-        ledstate1 = !ledstate1;
-        break;
-      case 'e': //Led cocina2
-        digitalWrite(led2, ledstate2);
-        ledstate2 = !ledstate2;
-        break;
-      case 'f': //Led Living 1
-        digitalWrite(led3, ledstate3);
-        ledstate3 = !ledstate3;
-        break;
-      case 'g': //Led Living 2
-        digitalWrite(led4, ledstate4);
-        ledstate4 = !ledstate4;
-        break;
+  if (Serial.available() > 0) {
+    int tempReading = analogRead(tempPin); // leer temperatura
+    double tempC = log(10000.0 * ((1024.0 / tempReading - 1)));
+    tempC = (1 / (0.001129148 + (0.000234125 + (0.0000000876741 * tempC * tempC )) * tempC )) - 273.15; //temperatura en Celsius
+    int valor = round(map(tempC, 15, 40, 30, 180)); // conversion de temperatura para la app
+    String datoString = Serial.readString(); // llegaran 3 datos desde el Bluetooth, separados por coma
+    String estado = separador.separa(datoString, ',', 0);
+    String pin = separador.separa(datoString, ',', 1);
+    String dispositivo = separador.separa(datoString, ',', 2);
+    if (dispositivo.length() > 1) { // si es un string
+      if (dispositivo == "leds") {
+        digitalWrite(pin.toInt(), estado.toInt());
+      }
+    } else if (dispositivo.length() == 1) { // si es un char
+      if (dispositivo == "a") {
+        //prender las luces
+      } else if (dispositivo == "b") {
+        //apagar las luces
+      }
     }
   }
+  if (irrecv.decode(&results)) {
+    Serial.println(results.value, HEX);
+    irrecv.resume(); // Receive the next value
+  }
+
 }

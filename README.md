@@ -3,9 +3,10 @@ Este proyecto, Arduinux, consiste en hacer una aplicacion para manejar los disti
 
 # Integrantes y división de trabajos
 Sofía Inés Bertoldo : Desarrollo de maceta automática <br/>
-Matías Boldrini, Valentín Fernandez, Agustín Andoneghi : Desarrollo y diseño de app
-Agustín Sarfati : Desarrollo de Trituradora (compostador)
-Luigi Cartello : Desarrollo  de informe y presentación.
+Matías Boldrini, Valentín Fernandez, Agustín Andoneghi : Desarrollo y diseño de app <br/>
+Agustín Sarfati : Desarrollo de Trituradora (compostador) <br/>
+Luigi Cartello : Desarrollo  de informe y presentación. <br/>
 
-# Videos : 
-[![Alt text](https://img.youtube.com/vi/FBv1LNSiLVA/0.jpg)](https://www.youtube.com/watch?v=FBv1LNSiLVA)
+# Maceta Automatica (demo) : 
+[![Alt text](https://img.youtube.com/vi/FBv1LNSiLVA/0.jpg)](https://www.youtube.com/watch?v=FBv1LNSiLVA) <br/>
+# Trituradora (demo) : 

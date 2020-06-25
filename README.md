@@ -2,7 +2,7 @@
 Este proyecto, Arduinux, consiste en hacer una aplicacion para manejar los distintos dispositivos del hogar con la ayuda del microcontrolador arduino, y la herramienta de desarrollo de apps en Android, Kodular.
 
 # Integrantes y división de trabajos
-Sofía Inés Bertoldo : Desarrollo de maceta automática
+Sofía Inés Bertoldo : Desarrollo de maceta automática <br/>
 Matías Boldrini, Valentín Fernandez, Agustín Andoneghi : Desarrollo y diseño de app
 Agustín Sarfati : Desarrollo de Trituradora (compostador)
 Luigi Cartello : Desarrollo  de informe y presentación.

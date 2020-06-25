@@ -1,5 +1,5 @@
-# Sobre Nosotros :
-Este proyecto, Arduinux, consiste en hacer una aplicacion para manejar los distintos dispositivos del hogar con la ayuda del microcontrolador arduino, y la herramienta de desarrollo de apps en Android, Kodular.
+# Sobre Arduinux y Nosotros :
+Este proyecto, Arduinux, consiste en hacer una aplicacion para manejar los distintos dispositivos del hogar con la ayuda del microcontrolador arduino, y la herramienta de desarrollo de apps en Android, Kodular. 
 
 # Integrantes y división de trabajos
 Sofía Inés Bertoldo : Desarrollo de maceta automática <br/>

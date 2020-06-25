@@ -1,9 +1,11 @@
-# Arduino
-Instagram : @matibol_16 || Youtube : https://www.youtube.com/channel/UChnXf3O49gMiyDc_RhVcP7w?view_as=subscriber
+# Sobre Nosotros :
+Este proyecto, Arduinux, consiste en hacer una aplicacion para manejar los distintos dispositivos del hogar con la ayuda del microcontrolador arduino, y la herramienta de desarrollo de apps en Android, Kodular.
 
-# Librerias (elegoo.com)
-https://www.elegoo.com/tutorial/Elegoo%20The%20Most%20Complete%20Starter%20Kit%20for%20MEGA2560%20V2.0.2020.5.29.zip
-https://somosioticos.com/archivos/separador.zip
+# Integrantes y división de trabajos
+Sofía Inés Bertoldo : Desarrollo de maceta automática
+Matías Boldrini, Valentín Fernandez, Agustín Andoneghi : Desarrollo y diseño de app
+Agustín Sarfati : Desarrollo de Trituradora (compostador)
+Luigi Cartello : Desarrollo  de informe y presentación.
 
-# Aplicacion 
-Proximamente
+# Videos : 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FBv1LNSiLVA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -7,6 +7,8 @@ Matías Boldrini, Valentín Fernandez, Agustín Andoneghi : Desarrollo y diseño
 Agustín Sarfati : Desarrollo de Trituradora (compostador) <br/>
 Luigi Cartello : Desarrollo  de informe y presentación. <br/>
 
+# Demo de Aplicación:
+[![Alt text](https://img.youtube.com/vi/96SLYK1jyqo/0.jpg)](https://https://www.youtube.com/watch?v=96SLYK1jyqo) <br/>
 # Maceta Automatica (demo) : 
 [![Alt text](https://img.youtube.com/vi/FBv1LNSiLVA/0.jpg)](https://www.youtube.com/watch?v=FBv1LNSiLVA) <br/>
 # Trituradora (demo) : 

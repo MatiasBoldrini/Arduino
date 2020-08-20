@@ -3,9 +3,8 @@ Este proyecto, Arduinux, consiste en hacer una aplicacion para manejar los disti
 
 ## Integrantes y división de trabajos
 <b>Sofía Inés Bertoldo</b> : Desarrollo de maceta automática <br/>
-<b>Matías Boldrini, Valentín Fernandez, Agustín Andoneghi</b> : Desarrollo y diseño de app <br/>
 <b>Agustín Sarfati</b> : Desarrollo de Trituradora (compostador) <br/>
-<b>Luigi Cartello</b> : Desarrollo  de informe y presentación. <br/>
+<b>Matías Boldrini, Valentín Fernandez, Agustín Andoneghi</b> : Desarrollo y diseño de app <br/>
 
 ### Demo de Aplicación:
 [![Alt text](https://img.youtube.com/vi/96SLYK1jyqo/0.jpg)](https://https://www.youtube.com/watch?v=96SLYK1jyqo) <br/>
